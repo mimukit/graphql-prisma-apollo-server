@@ -1,13 +1,35 @@
-# Apollo Auth Example
+# GraphQL Prisma Apollo Server
 
-Simple authentication & authorization implementation in apollo graphql using directives.
+Simple graphql boilerplate with apollo server 2 & prisma. It inclueds basic authentication & authorization.
+
+## Requirements
+
+Install `prisma` cli globally
+
+```
+npm i -g prisma
+```
 
 ## Installation
 
-Clone this repo & `cd` into that directory
+Clone this repo & `cd` into that directory.
+
+Install `npm` packages
 
 ```
 npm i
+```
+
+Then deploy to prisma server (you may need free prisma cloud account):
+
+```
+npm run prisma:deploy
+```
+
+Start development server:
+
+```
+npm run dev
 ```
 
 ## Tools
