@@ -7,7 +7,7 @@
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "nodemon src/server.js -e js,graphql",
     "lint": "eslint src/server.js",
-    "prisma-deploy": "prisma deploy"
+    "prisma:deploy": "prisma deploy"
   },
   "keywords": [],
   "author": "Mukitul Islam Mukit",
@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "graphql": "^14.0.2",
     "graphql-import": "^0.7.1",
+    "joi": "^14.0.6",
     "jsonwebtoken": "^8.4.0",
     "pm2": "^3.2.2",
     "prisma-client-lib": "^1.20.7"
