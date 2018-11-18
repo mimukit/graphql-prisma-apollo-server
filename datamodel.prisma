@@ -1,0 +1,21 @@
+enum Role {
+  ADMIN
+  USER
+}
+
+type User {
+  id: ID! @unique
+  name: String!
+  email: String! @unique
+  password: String!
+  createdAt: DateTime!
+  roles: [Role!]!
+  notes: [Note!]!
+}
+
+type Note {
+  id: ID! @unique
+  title: String!
+  text: String!
+  author: User!
+}

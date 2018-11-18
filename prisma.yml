@@ -1,0 +1,11 @@
+endpoint: https://eu1.prisma.sh/mimukit/apollo-graphql-prisma-server/dev
+datamodel: datamodel.prisma
+# secret: ${env:PRISMA_SECRET}
+
+generate:
+  - generator: javascript-client
+    output: ./src/prisma/generated/prisma-client/
+
+hooks:
+  post-deploy:
+    - prisma generate
