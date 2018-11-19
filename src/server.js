@@ -44,10 +44,12 @@ server.applyMiddleware({
   },
 });
 
-app.listen({ port: process.env.PORT }, () =>
+const port = process.env.PORT || 4000;
+
+app.listen({ port }, () =>
   process.env.NODE_ENV === 'production'
     ? console.log('Server started')
     : console.log(
-        `Server started at http://localhost:${process.env.PORT}/graphql`,
+        `Server started at http://localhost:${port}/graphql`,
       ),
 );
