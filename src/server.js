@@ -22,6 +22,9 @@ const server = new ApolloServer({
     isAuth: IsAuthDirective,
     hasRole: HasRoleDirective,
   },
+  engine: {
+    apiKey: process.env.ENGINE_API_KEY,
+  },
   context: async ({ req }) => {
     let user = {};
 
